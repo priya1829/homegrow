@@ -1,0 +1,96 @@
+@media (min-width:992px) {
+    .nav-menu{
+      gap: 2rem;
+      width: auto !important;
+    }
+    .card-img{
+      height: 360px;
+    }
+  }
+  @media (min-width:1140px) {
+   
+    .card-img{
+      height: 500px;
+    }
+  }
+  
+  @media (max-width:768px) {
+    .nav-box{
+      display: none;
+    }
+    .nav-menu {
+      gap: 0.5rem;
+      width:auto;
+  }
+  .image-container{
+    display: none;
+  }
+  
+
+  }
+
+ @media (max-width:767px) {
+  .footer-bs{
+    position: relative;
+    bottom: 0;
+    width: 100%; 
+  }
+  .card-img{
+    height: 350px !important;
+  }
+ }
+
+@media (max-width:500px) {
+  .slider-button{
+    position: absolute;
+    top: 70%;
+    left: 30%;
+    transform: translate(-50%,-50%);
+    font-size: 10px;
+    background-color: #5ca946;
+    color: white;
+    text-align: center;
+  }
+  .slider-text{
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    font-size: 15px;
+    color: #5ca946;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .slider-text-2{
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    font-size: 15px;
+    color: #5ca946;
+    font-size: 20px;
+    font-weight: 500;
+  }
+  .img-button{
+    position: absolute;
+      top: 60%;
+      left: 40%;
+      transform: translate(-50%,-50%);
+      font-size: 15px;
+      background-color: #5ca946;
+      color: white;
+  }
+  
+  .img-text{
+      position: absolute;
+      top: 40%;
+      left: 5%;
+      font-size: 15px;
+      color: #5ca946;
+      font-size: 25px;
+      font-weight: 500;
+      background-color:#5ca946;
+      color: white;
+      border-radius: 5px;
+      padding: 0px 5px 0px 5px;
+    }
+}
+

@@ -1,0 +1,165 @@
+
+        .MultiCarousel {
+            float: left;
+            overflow: hidden;
+            padding: 15px;
+            width: 100%;
+            position: relative;
+        }
+
+        .MultiCarousel .MultiCarousel-inner {
+            display: flex;
+            transition: 1s ease all;
+        }
+
+        .MultiCarousel .MultiCarousel-inner .item {
+            flex: 0 0 auto;
+            margin: 0 5px;
+            text-align: center;
+        }
+
+        .MultiCarousel .MultiCarousel-inner .item img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .MultiCarousel .left-arrow ,
+        .MultiCarousel .right-arrow  {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #5ca946;
+            border: none;
+            cursor: pointer;
+            z-index: 1
+        }
+
+        .MultiCarousel .left-arrow  {
+            left: 0
+        }
+
+        .MultiCarousel .right-arrow {
+            right: 0
+        }
+
+        .title {
+            color: #5ca946;
+        }
+
+
+    
+        
+        .MultiCarousel2 {
+            float: left;
+            overflow: hidden;
+            padding: 15px;
+            width: 100%;
+            position: relative
+        }
+
+        .MultiCarousel2 .MultiCarousel2-inner {
+            display: flex;
+            transition: 1s ease all
+        }
+
+        .MultiCarousel2 .MultiCarousel2-inner .item {
+            flex: 0 0 auto;
+            margin: 0 5px;
+            text-align: center
+        }
+
+        .MultiCarousel2 .MultiCarousel2-inner .item img {
+            max-width: 100%;
+            height: auto
+        }
+
+        .MultiCarousel2 .leftLst ,
+        .MultiCarousel2 .rightLst {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #5ca946;
+            border: none;
+            cursor: pointer;
+            z-index: 1
+        }
+
+        .MultiCarousel2 .leftLst {
+            left: 0
+        }
+
+        .MultiCarousel2 .rightLst {
+            right: 0
+        }
+
+        .title {
+            color: #5ca946
+        }
+
+        @media (max-width:500px) and (min-width:220px) {
+            .title {
+                color: #5ca946;
+                font-size: 18px
+            }
+        }
+
+    
+        
+        
+        .MultiCarousel3 {
+            float: left;
+            overflow: hidden;
+            padding: 15px;
+            width: 100%;
+            position: relative
+        }
+
+        .MultiCarousel3 .MultiCarousel3-inner {
+            display: flex;
+            transition: 1s ease all
+        }
+
+        .MultiCarousel3 .MultiCarousel3-inner .item {
+            flex: 0 0 auto;
+            margin: 0 5px;
+            text-align: center
+        }
+
+        .MultiCarousel3 .MultiCarousel3-inner .item img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: -35px;
+        }
+
+        .MultiCarousel3 .leftLst ,
+        .MultiCarousel3 .rightLst {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #5ca946;
+            border: none;
+            cursor: pointer;
+            z-index: 1
+        }
+
+        .MultiCarousel3 .leftLst {
+            left: 0
+        }
+
+        .MultiCarousel3 .rightLst {
+            right: 0
+        }
+
+        .shop-btn-1{
+            border: 0px;
+            padding: 7px 90px;
+            cursor: pointer;
+            transition: all .3s ease;
+            background-color: #5ca946;
+            color: #fff;
+            font-size: 14px;
+          }
+
+    
+
+    
