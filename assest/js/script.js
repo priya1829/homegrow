@@ -1,10 +1,10 @@
+//multislider-1
 document.addEventListener("DOMContentLoaded", function() {
     var itemsContainer = document.getElementById("MultiCarousel1").querySelector(".MultiCarousel-inner");
     var totalItems = itemsContainer.querySelectorAll(".item").length;
     var currentSlide = 0;
-    var slideWidth = 250; // Width of each slide
-    var interval = 1000; // Change slide every 3 seconds
-
+    var slideWidth = 250; 
+    var interval = 1000; 
     var autoSlider = setInterval(function() {
         moveSlide(1);
     }, interval);
@@ -14,22 +14,19 @@ document.addEventListener("DOMContentLoaded", function() {
         itemsContainer.style.transition = "transform 0.5s ease-in-out";
         itemsContainer.style.transform = "translateX(" + (-currentSlide * slideWidth) + "px)";
 
-        // Check if reached the last slide, then reset to the first slide
         if (currentSlide === totalItems - 1) {
             setTimeout(function() {
                 itemsContainer.style.transition = "none";
                 currentSlide = 0;
                 itemsContainer.style.transform = "translateX(0)";
-            }, 500); // Wait for transition to complete before resetting
+            }, 500);
         }
     }
 
-    // Pause slider on mouseover
     itemsContainer.addEventListener("mouseover", function() {
         clearInterval(autoSlider);
     });
 
-    // Resume slider on mouseout
     itemsContainer.addEventListener("mouseout", function() {
         autoSlider = setInterval(function() {
             moveSlide(1);
@@ -114,42 +111,7 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 
-//Form js
-   // Show email form when "Using Email?" link is clicked
-   document.getElementById("showEmailForm").addEventListener("click", function () {
-    document.getElementById("mobileForm").style.display = "none";
-    document.getElementById("emailForm").style.display = "block";
-});
 
-// Show email form when "Using Email?" link is clicked
-document.getElementById("showMobileForm").addEventListener("click", function () {
-    document.getElementById("mobileForm").style.display = "block";
-    document.getElementById("emailForm").style.display = "none";
-});
 
-// Simulate OTP verification (you can replace this with your actual logic)
-document.getElementById("submitMobile").addEventListener("click", function () {
-    document.getElementById("mobileForm").style.display = "none";
-    document.getElementById("otpForm").style.display = "block";
-});
-
-// Simulate OTP verification (you can replace this with your actual logic)
-document.getElementById("submitEmail").addEventListener("click", function () {
-    document.getElementById("emailForm").style.display = "none";
-    document.getElementById("otpForm").style.display = "block";
-});
-
-// Verify OTP (you can replace this with your actual logic)
-document.getElementById("verifyOTP").addEventListener("click", function () {
-    alert("OTP verified successfully!");
-});
-
-document.addEventListener("DOMContentLoaded", function (event) {
-
-    function OTPInput() {
-        const inputs = document.querySelectorAll('#otp > *[id]');
-        for (let i = 0; i < inputs.length; i++) { inputs[i].addEventListener('keydown', function (event) { if (event.key === "Backspace") { inputs[i].value = ''; if (i !== 0) inputs[i - 1].focus(); } else { if (i === inputs.length - 1 && inputs[i].value !== '') { return true; } else if (event.keyCode > 47 && event.keyCode < 58) { inputs[i].value = event.key; if (i !== inputs.length - 1) inputs[i + 1].focus(); event.preventDefault(); } else if (event.keyCode > 64 && event.keyCode < 91) { inputs[i].value = String.fromCharCode(event.keyCode); if (i !== inputs.length - 1) inputs[i + 1].focus(); event.preventDefault(); } } }); }
-    } OTPInput();
-});
 
 

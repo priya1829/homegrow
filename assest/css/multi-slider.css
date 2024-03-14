@@ -47,7 +47,10 @@
         }
 
 
-    
+        .title{
+            font: small;
+            font-weight: 500;
+        }
         
         .MultiCarousel2 {
             float: left;

@@ -12,255 +12,380 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/assest/css/style.css">
     <link rel="stylesheet" href="/assest/css/responsive.css">
-    <link rel="stylesheet" href="/assest/css/multi-slider.css">
+    <!-- <link rel="stylesheet" href="/assest/css/multi-slider.css"> -->
+
+
+
 </head>
 
 <body>
-    <!-- header -->
-        <header class="header-main">
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <nav class="navbar navbar-expand-lg ">
-                            <div class="nav-logo">
-                                <a class="navbar-brand " href="#">
-                                    <img class="img-fluid" src="/assest/images/logo.svg" alt="Bootstrap">
-                                </a>
+    <header class="header-main">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel"
+                        class="offcanvas offcanvas-top ">
+                        <div class="offcanvas-header">
+                            <button type="button" data-bs-dismiss="offcanvas" aria-label="Close"
+                                class="btn-close text-reset"></button>
+                        </div>
+                        <div class="offcanvas-body">
+                            <div class="input-group mb-3 my-3">
+                                <input type="text" placeholder="username" aria-label="Username"
+                                    aria-describedby="basic-addon1" class="form-control">
+                                <span id="basic-addon1" class="input-group-text bg-white">
+                                    <i class="fas fa-search text-dark navbar-items"></i>
+                                </span>
                             </div>
-                            <a class="navbar-toggler nav-toggle" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="navbar-toggler-icon icon-toggle"></span>
+                        </div>
+                    </div>
+
+                    <nav class="navbar navbar-expand-lg ">
+                        <div class="nav-logo">
+                            <a class="navbar-brand " href="#">
+                                <img class="img-fluid" src="/assest/images/logo.svg" alt="Bootstrap">
                             </a>
-                            <div class="collapse navbar-collapse nav-main-menu" id="navbarNav">
-                                <ul class="navbar-nav mx-auto nav-menu">
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="index.html">Home</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">All Categories</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Combo Products</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a class="nav-link" href="#">Hot Deals</a>
-                                    </li>
-                                </ul>
-                            </div>
+                        </div>
+                        <a class="navbar-toggler nav-toggle" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="">
+                                <i class="fas fa-bars"></i> <!-- Replace this line with your desired icon -->
+                            </span>
+                        </a>
+                        <div class="collapse navbar-collapse nav-main-menu" id="navbarNav">
+                            <ul class="navbar-nav mx-auto nav-menu">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html">Home</a>
+
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="category.html">All Categories</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="comboproduct.html">Combo Products</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="hotdeal.html">Hot Deals</a>
+                                </li>
+                            </ul>
                             <div class="nav-box">
                                 <div class="icons">
-                                    <ul class="navbar-nav nav-icon">
-                                        <li class="nav-item">
-                                            <div class="image-container">
-                                                <a href=""> <img src="/assest/icons/search.svg" alt="Your Image" width="25"
-                                                        height="25">
+                                    <div class="image-container ">
+                                        <div class="d-flex nav-icon">
+                                            <a class="search-popuup"><span data-bs-toggle="offcanvas"
+                                                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar"
+                                                    class="icon">
+                                                    <i class="fas fa-search text-dark navbar-items"></i></span></a>
+                                            <div class="d-flex header-element right-block-box">
+                                                <a href="login" class="user mx-4">
+                                                    <span class="icon">
+                                                        <i class="fas fa-user text-dark navbar-items"></i></span></a>
+                                            </div>
+                                            <div class="d-flex header-element right-block-box">
+                                                <a href="#" class="wishlist position-relative">
+                                                    <a href="wishlist" class="user">
+                                                        <span class="icon">
+                                                            <i class="fas fa-heart text-dark navbar-items"></i>
+                                                            <span class="badge badge-success">5</span>
+                                                        </span>
+                                                    </a>
                                                 </a>
                                             </div>
-                                            
-                                        </li>
-                                        <li class="nav-item">
-                                            <div class="image-container">
-                                                <a href="login"><img src="/assest/icons/user.svg" alt="Your Image"
-                                                        width="25" height="25">
-                                                </a>
+                                            <div>
+                                                <a class="wishlist position-relative mx-4">
+                                                    <span type="button" data-bs-toggle="offcanvas"
+                                                        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"
+                                                        class="icon">
+                                                        <i class="fas fa-shopping-bag text-dark navbar-items"></i>
+                                                        <span class="badge badge-success">7</span>
+                                                    </span></a>
                                             </div>
-                                        </li>
-                                        <li class="nav-item">
-                                            <div class="image-container">
-                                                <a href="wishlist">  <img src="/assest/icons/heart.svg" alt="Your Image" width="25" height="25"></a>
-                                                <span class="badge badge-success">5</span>
-                                            </div>
-                                        </li>
-                                        <li class="nav-item">
-                                            <div class="image-container">
-                                               <a href="#"> <img src="/assest/icons/shopping-bag.svg" alt="Your Image" width="25"
-                                                    height="25"></a>
-                                                <span class="badge badge-success">7</span>
-                                            </div>
-                                        </li>
-                                    </ul>
+                                        </div>
+                                    </div>
+
                                 </div>
                             </div>
+                        </div>
+
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasRightLabel">There are 4 Products</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="card my-3 p-3 border border-start-0 border-end-0 rounded-0 ">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="row">
+                                <div class="col-md-3 ">
+                                    <img src="/assest/images/daal.jpg" alt="" class="src" width="50" height="50"
+                                        class="img-fulid">
+                                </div>
+                                <div class="col-md-6">
+                                    <h6 style="font-size: 1rem;">Daal Combo</h6>
+                                    <h6 style="font-size: 1rem;">1 nos &#8377; 80</h6>
+                                </div>
+                                <div class="col-md-3 mt-3">
+                                    <i class="fas fa-trash text-dark navbar-items "></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card my-3 p-3 border border-start-0 border-end-0 rounded-0 ">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="row">
+                                <div class="col-md-3 ">
+                                    <img src="/assest/images/daal.jpg" alt="" class="src" width="50" height="50"
+                                        class="img-fulid">
+                                </div>
+                                <div class="col-md-6">
+                                    <h6 style="font-size: 1rem;">Daal Combo</h6>
+                                    <h6 style="font-size: 1rem;">1 nos &#8377; 80</h6>
+                                </div>
+                                <div class="col-md-3 mt-3">
+                                    <i class="fas fa-trash text-dark navbar-items "></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card my-4 p-3 border border-start-0 border-end-0 rounded-0 ">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h6 style="font-size:15px;">Sub total:</h6>
+                                </div>
+                                <div class="col-md-3">
+                                </div>
+                                <div class="col-md-3 ">
+                                    <h6 style="font-size: 1rem;">&#8377; 160.00</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3 my-5">
+                    <a href="cart.html"> <button class="btn form-button" id="submitMobile">View cart</button></a>
+                </div>
+                <div class="mb-3">
+                    <a href="checkout.html"> <button class="btn form-button" id="submitMobile">Check out</button></a>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+
+
+
+
+    <section class="about-back section-tb-padding bsb-hero-5 px-3 bsb-overlay background-banner"
+        style="background-image: url(/assest/images/shadow-bg.png); padding:80px">
+        <div class="container hero-breadcrumb">
+            <div class="row">
+                <div class="col">
+                    <div class="breadcrumb-main">
+                        <ul class="breadcrumb-list">
+                            <li class="breadcrumb-text">
+                                <a href="home" class="text-decoration-none">Home</a>
+                            </li>
+                            <li class="breadcrumb-subtext">
+                                <span>Wishlist</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            </nav>
-        </header>
-<!--wishlist-->
+        </div>
+    </section>
 
 
 
-       
+    <div class="container">
+        <div class="row  my-5 p-3 border border-start-0 border-end-0 rounded-0">
+            <div class="col-auto me-auto">Wishlist :</div>
+            <div class="col-auto">2 items</div>
+            <div id="Wishlist"></div>
+        </div>
+    </div>
+    <script>
+        const Wishlist = document.getElementById('Wishlist');
 
-    
+        function removeFromWishlist(id) {
+            const item = document.getElementById(id);
+            item.remove();
+        }
 
-<div class="container mt-5">
-    <h1>My Wishlist</h1>
-    <div id="wishlist"></div>
-</div>
-
-<script>
-    const wishlist = document.getElementById('wishlist');
-
-    function removeFromWishlist(id) {
-        const item = document.getElementById(id);
-        item.remove();
-    }
-
-    function addToWishlist(product) {
-        const item = `
-            <div class="wishlist-item" id="${product.id}">
-                <div class="row">
+        function addToWishlist(product) {
+            const item = `
+            <div class="Wishlist-item" id="${product.id}">
+                
+                <div class="row  my-3 p-3 border border-start-0 border-end-0 rounded-0">
+                    <div class="col-lg-8">
+                        <div class="row">
                     <div class="col-md-2">
                         <img src="${product.image}" alt="${product.name}" class="product-image">
                     </div>
-                    <div class="col-md-4">
-                        <h6>${product.name}</h6>
-                        <h6>${product.description}</h6>
-
+                    <div class="col-md-6 my-3 product-des">
+                        <h6 style="font-size:15px;">${product.name}</h6>
+                        <h6 style="font-size:15px;">${product.description}</h6>
+                        <h6 style="font-size:15px;">${product.quantity}</h6>
                     </div>
-                    <div class="col-md-2">
+                    </div>
+                    </div>
+                   
+                    <div class="col-lg-4">
+                        <div class="row">
+                   
+                    <div class="col-md-7 ">
+                        <div class="d-flex flex-row">
+                            <a href="cart.html" class="wishlist-cart my-3">Add to cart</a>
+                      </div>
+                      <div class="">
+                        <a href="#" class="wishlist-buy" >Buy Now</a>
+                      </div>
+                    </div>
+                    <div class="col-md-5 mt-3">
                         <p class="price">${product.price}</p>
                         <p class="originalprice">${product.originalprice}</p>
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                
+            </div>
+        `;
+            Wishlist.innerHTML += item;
+        }
 
+        // Example products
+        const products = [
+            { id: 'product1', name: 'Healthy Starter Pack - Dhal Combo', description: 'Dhal Combo', quantity: '1nos', image: '/assest/images/daal.jpg', price: '&#8377; 80.00', originalprice: "&#8377; 90.00" },
+            { id: 'product2', name: 'Healthy Starter Pack - Dhal Combo', description: 'Dhal Combo', quantity: '1nos', image: '/assest/images/daal.jpg', price: '&#8377; 80.00', originalprice: "&#8377; 90.00" },
+
+            // Add more products here
+        ];
+
+        // Add products to the wishlist
+        products.forEach(product => {
+            addToWishlist(product);
+        });
+    </script>
+
+
+
+
+    <footer class=" text-black footer-bs">
+        <!-- section1 -->
+        <section class="footer-main">
+            <div class="container p-0 pb-0">
+                <div class="row">
+                    <div class=" col-xl-4 mx-auto mt-3">
+                        <div class="footer-logo">
+                            <a class=" " href="#">
+                                <img class="img-fluid" src="/assest/images/logo.svg" alt="Bootstrap">
+                            </a>
+                        </div>
+                        <div>
+                            <p class="logo-text">
+                                Home Grow is the definition of Health and Wellness! Founded in 2023, we like to say we
+                                are
+                                bringing joy to India, and it’s something we hope to be doing for years to come. But we
+                                offer more than just high-quality, delicious products.
+                            </p>
+                        </div>
                     </div>
-                    <div class="col-md-2">
-                       <p> <a href="#" class="cart-add">Add to Cart</a></p>
-                       
-                        <p><a href="" class="cart-buy">Buy Now</a><p>
+                    <div class="col mx-auto mt-3 ">
+                        <h6 class="text-uppercase font-weight-bold footer-logo">Quick Links</h6>
+                        <div class="sub-link">
+                            <p class="logo-text">
+                                <a class="text-black" href="#">Home</a>
+                            </p>
+                            <p class="logo-text">
+                                <a class="text-black" href="#">About Us</a>
+                            </p>
+                            <p class="logo-text">
+                                <a class="text-black" href="#">All Categories</a>
+                            </p>
+                            <p class="logo-text">
+                                <a class="text-black" href="#">Contact</a>
+                            </p>
+                        </div>
                     </div>
-                    <div class="col-md-1">
-                        <button class="btn btn-remove cart-remove" onclick="removeFromWishlist('${product.id}')">Remove</button>
+                    <div class="col mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold footer-logo">
+                            Information
+                        </h6>
+                        <div class="sub-link">
+                            <p class="logo-text">
+                                <a class="text-black">Terms and Conditions
+                                </a>
+                            </p>
+                            <p class="logo-text">
+                                <a class="text-black">Privacy policy</a>
+                            </p>
+                            <p class="logo-text">
+                                <a class="text-black">Shipping policy</a>
+                            </p>
+                            <p class="logo-text">
+                                <a class="text-black">Replacement and Return Policy</a>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col mx-auto mt-3">
+                        <h6 class="text-uppercase mb-4 font-weight-bold footer-logo">Contact Us</h6>
+                        <div class="sub-link">
+                            <p class="logo-text"><i class=" mr-3"></i> Home Grow Enterprises</p>
+                            <p class="logo-text"><i class=" mr-3"></i>Vadavalli, Coimbatore</p>
+                            <p class="logo-text"><i class=" mr-3"></i>+91-7788996891</p>
+                            <p class="logo-text"><i class=" mr-3"></i>support@homegrow.co.in</p>
+                        </div>
+                    </div>
+                </div>
+        </section>
+
+        <!-- section2 -->
+        <section class="footer-sub">
+            <div class="container">
+                <div class="row d-flex align-items-center ">
+                    <div class="col-md-7 col-lg-8  text-md-start">
+                        <div class="p-3 text-white logo-text">
+                            Copyright © 2024 Homegrow All Rights Reserved.
+                        </div>
+                    </div>
+                    <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
+                        <a class="btn btn-outline-light btn-floating m-2" class="text-white" role="button"
+                            style="border:none;"><i class="fab fa-facebook"></i>
+                        </a>
+
+                        <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"
+                            style="border:none;"><i class="fab fa-google"></i></a>
+
+                        <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"
+                            style="border:none;"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
-        `;
-        wishlist.innerHTML += item;
-    }
-
-    // Example products
-    const products = [
-        { id: 'product1', name: 'Healthy Starter Pack - Dhal Combo', description: 'Dhal Combo', image: '/assest/images/daal.jpg', price: '&#8377; 80.00', originalprice: "&#8377; 90.00" },
-        { id: 'product2', name: 'Healthy Starter Pack - Dhal Combo', description: 'Dhal Combo', image: '/assest/images/daal.jpg', price: '&#8377; 80.00', originalprice: "&#8377; 90.00" },
-
-        // Add more products here
-    ];
-
-    // Add products to the wishlist
-    products.forEach(product => {
-        addToWishlist(product);
-    });
-</script>
+        </section>
 
 
+    </footer>
 
+    <script src="/assest/js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+</body>
 
-<br><br><br>
-<br><br><br>
-<br><br><br>
-<br><br><br>
-
-
-        <footer class=" text-black footer-bs">
-            <!-- section1 -->
-            <section class="footer-main">
-                <div class="container p-0 pb-0">
-                    <div class="row">
-                        <div class=" col-xl-5 mx-auto mt-3">
-                            <div class="footer-logo">
-                                <a class=" " href="#">
-                                    <img class="img-fluid" src="/assest/images/logo.svg" alt="Bootstrap">
-                                </a>
-                            </div>
-                            <div>
-                                <p class="logo-text">
-                                    Home Grow is the definition of Health and Wellness! Founded in 2023, we like to say we
-                                    are
-                                    bringing joy to India, and it’s something we hope to be doing for years to come. But we
-                                    offer more than just high-quality, delicious products.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 ">
-                            <h6 class="text-uppercase font-weight-bold footer-logo">Quick Links</h6>
-                            <div class="sub-link">
-                                <p class="logo-text">
-                                    <a class="text-black" href="#">Home</a>
-                                </p>
-                                <p class="logo-text">
-                                    <a class="text-black" href="#">About Us</a>
-                                </p>
-                                <p class="logo-text">
-                                    <a class="text-black" href="#">All Categories</a>
-                                </p>
-                                <p class="logo-text">
-                                    <a class="text-black" href="#">Contact</a>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-                            <h6 class="text-uppercase mb-4 font-weight-bold footer-logo">
-                                Information
-                            </h6>
-                            <div class="sub-link">
-                                <p class="logo-text">
-                                    <a class="text-black">Terms and Conditions
-                                    </a>
-                                </p>
-                                <p class="logo-text">
-                                    <a class="text-black">Privacy policy</a>
-                                </p>
-                                <p class="logo-text">
-                                    <a class="text-black">Shipping policy</a>
-                                </p>
-                                <p class="logo-text">
-                                    <a class="text-black">Replacement and Return Policy</a>
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-lg-3 col-xl-2 mx-auto mt-3">
-                            <h6 class="text-uppercase mb-4 font-weight-bold footer-logo">Contact Us</h6>
-                            <div class="sub-link">
-                                <p class="logo-text"><i class=" mr-3"></i> Home Grow Enterprises</p>
-                                <p class="logo-text"><i class=" mr-3"></i>Vadavalli, Coimbatore</p>
-                                <p class="logo-text"><i class=" mr-3"></i>+91-7788996891</p>
-                                <p class="logo-text"><i class=" mr-3"></i>support@homegrow.co.in</p>
-                            </div>
-                        </div>
-                    </div>
-            </section>
-    
-            <!-- section2 -->
-            <section class="footer-sub">
-                <div class="container">
-                    <div class="row d-flex align-items-center ">
-                        <div class="col-md-7 col-lg-8  text-md-start">
-                            <div class="p-3 text-white logo-text">
-                                Copyright © 2024 Homegrow All Rights Reserved.
-                            </div>
-                        </div>
-                        <div class="col-md-5 col-lg-4 ml-lg-0 text-center text-md-end">
-                            <a class="btn btn-outline-light btn-floating m-2" class="text-white" role="button"
-                                style="border:none;"><i class="fab fa-facebook"></i>
-                            </a>
-    
-                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"
-                                style="border:none;"><i class="fab fa-google"></i></a>
-    
-                            <a class="btn btn-outline-light btn-floating m-1" class="text-white" role="button"
-                                style="border:none;"><i class="fab fa-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </footer>
-        <!-- Footer -->
-    
-        <script src="/assest/js/script.js"></script>
-    
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-            crossorigin="anonymous"></script>
-    </body>
-    
-    </html>
+</html>

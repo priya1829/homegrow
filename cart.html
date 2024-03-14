@@ -12,7 +12,7 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/assest/css/style.css">
     <link rel="stylesheet" href="/assest/css/responsive.css">
-    <link rel="stylesheet" href="/assest/css/multi-slider.css">
+    <!-- <link rel="stylesheet" href="/assest/css/multi-slider.css"> -->
 </head>
 
 <body>
@@ -45,10 +45,10 @@
                         </div>
                         <a class="navbar-toggler nav-toggle" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon icon-toggle "></span>
+                            <span class="">
+                                <i class="fas fa-bars"></i> <!-- Replace this line with your desired icon -->
+                            </span>
                         </a>
-
-
                         <div class="collapse navbar-collapse nav-main-menu" id="navbarNav">
                             <ul class="navbar-nav mx-auto nav-menu">
                                 <li class="nav-item">
@@ -56,7 +56,7 @@
 
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#">All Categories</a>
+                                    <a class="nav-link" href="category.html">All Categories</a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="comboproduct.html">Combo Products</a>
@@ -171,14 +171,13 @@
                 </div>
                 <div class="mb-3 my-5">
                     <a href="cart.html"> <button class="btn form-button" id="submitMobile">View cart</button></a>
-                    
                 </div>
                 <div class="mb-3">
-                    <a href="checkout.html"><button class="btn form-button" id="submitMobile">Check out</button></a>
-                    
+                    <a href="checkout.html"> <button class="btn form-button" id="submitMobile">Check out</button></a>
                 </div>
             </div>
         </div>
+
     </header>
 
     <section class="about-back section-tb-padding bsb-hero-5 px-3 bsb-overlay background-banner"
@@ -192,7 +191,7 @@
                                 <a href="home" class="text-decoration-none">Home</a>
                             </li>
                             <li class="breadcrumb-subtext">
-                                <span>Login</span>
+                                <span>Your Shopping Cart</span>
                             </li>
                         </ul>
                     </div>
@@ -201,69 +200,97 @@
         </div>
     </section>
 
-
-    <!--form-->
-    <div class="container form-main my-5">
-        <div class="row justify-content-center mt-5">
-            <div class="col-lg-4 col-md-6 col-sm-6">
-                <div class="card shadow">
-                    <div class="card-body">
-                     
-
-                        <!-- Email Form (Initially Hidden) -->
-                        <div id="emailForm" style="display: none;">
-                            <h2 class="mb-3 form-text-main">Enter Your Email</h2>
-                            <input type="email" class="form-control mb-3" placeholder="Enter Email">
-                            <div class="mb-3 form-text">
-                                <a class="text-form" href="#" id="showMobileForm">Using phonenumber?</a>
-                            </div>
-                            <button class="btn form-button" id="submitEmail">Submit</button>
-                        </div>
-
-                        <div id="mobileForm">
-                            <h2 class="mb-3 form-text-main">Enter Your Mobile Number</h2>
-                            <div class="input-group mb-3">
-                                <span class="input-group-text">+91</span>
-                                <input type="text" class="form-control" placeholder="Enter Number">
-                            </div>
-                            <div class="mb-3 form-text">
-                                <a class="text-form" href="category.html" id="showEmailForm">Using Email?</a>
-                            </div>
-                            <div class="mb-3">
-                                <button class="btn form-button" id="submitMobile">Submit</button>
-                            </div>
-                        </div>
-                        <!-- OTP Verification Form (Initially Hidden) -->
-
-                        <div id="otpForm" style="display: none;">
-                            <h2 class="mb-3 form-text">Enter OTP</h2>
-                            <div> <span style="font-size: 15px;">A code has been sent to</span>
-                                <small>*******</small>
-                            </div>
-                            <input type="text" class="form-control mb-3 mt-2" placeholder="Enter OTP">
-                            <button class="btn form-button mt-2 " id="verifyOTP">Verify OTP</button>
-                            <div class="card-2">
-                                <div class="content d-flex justify-content-center align-items-center"> <span>Didn't get
-                                        the
-                                        code</span> <a href="#" class="text-decoration-none ms-3">Resend(1/3)</a> </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <div class="container">
+        <div class="row  my-5 p-3 border border-start-0 border-end-0 rounded-0">
+            <div class="col-auto me-auto">My cart :</div>
+            <div class="col-auto">2 items</div>
+            <div id="Mycart"></div>
         </div>
     </div>
+    <script>
+        const Mycart = document.getElementById('Mycart');
+
+        function removeFromMycart(id) {
+            const item = document.getElementById(id);
+            item.remove();
+        }
+
+        function addToMycart(product) {
+            const item = `
+            <div class="Mycart-item" id="${product.id}">
+                
+                <div class="row  my-3 p-3 border border-start-0 border-end-0 rounded-0">
+                    <div class="col-lg-8">
+                        <div class="row">
+                    <div class="col-md-2">
+                        <img src="${product.image}" alt="${product.name}" class="product-image">
+                    </div>
+                    <div class="col-md-6 my-4 product-des">
+                        <h6 style="font-size:15px;">${product.name}</h6>
+                        <h6 style="font-size:15px;">${product.description}</h6>
+                    </div>
+                    </div>
+                    </div>
+                   
+                    <div class="col-lg-4">
+                        <div class="row">
+                   
+                    <div class="col-md-7 my-2">
+                        <div class="d-flex flex-row">
+                        <button class="btn quantity-button  "
+                          onclick="this.parentNode.querySelector('input[type=number]').stepDown()">
+                          <i class="fas fa-minus"></i>
+                        </button>
+    
+                        <input id="form1" min="0" name="quantity" value="1" type="number"
+                          class="form-control form-control-sm" style="width: 50px; border: none; text-align: center;" />
+    
+                        <button class="btn quantity-button "
+                          onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
+                          <i class="fas fa-plus"></i>
+                        </button>
+                      </div>
+                      <div class="mt-4">
+                        <a href="#"><button class="btn cart-buy px-4" >Buy Now</button></a>
+                      </div>
+                    </div>
+                    <div class="col-md-5 mt-3">
+                        <p class="price">${product.price}</p>
+                        <a class=" remove" style="font-weight:200; font-size:15px; color:#5CA946" onclick="removeFromMycart('${product.id}')">REMOVE</a>
+
+                    </div>
+                    </div>
+                    </div>
+                    </div>
+                
+            </div>
+        `;
+            Mycart.innerHTML += item;
+        }
+
+        // Example products
+        const products = [
+            { id: 'product1', name: 'Healthy Starter Pack - Dhal Combo', description: 'Dhal Combo', image: '/assest/images/daal.jpg', price: '&#8377; 80.00', },
+            { id: 'product2', name: 'Healthy Starter Pack - Dhal Combo', description: 'Dhal Combo', image: '/assest/images/daal.jpg', price: '&#8377; 80.00', },
+
+            // Add more products here
+        ];
+
+        // Add products to the wishlist
+        products.forEach(product => {
+            addToMycart(product);
+        });
+    </script>
 
 
 
 
-    <!--footer-->
     <footer class=" text-black footer-bs">
         <!-- section1 -->
         <section class="footer-main">
             <div class="container p-0 pb-0">
                 <div class="row">
-                    <div class=" col-xl-5 mx-auto mt-3">
+                    <div class=" col-xl-4 mx-auto mt-3">
                         <div class="footer-logo">
                             <a class=" " href="#">
                                 <img class="img-fluid" src="/assest/images/logo.svg" alt="Bootstrap">
@@ -271,16 +298,14 @@
                         </div>
                         <div>
                             <p class="logo-text">
-                                Home Grow is the definition of Health and Wellness! Founded in 2023, we like to say
-                                we
+                                Home Grow is the definition of Health and Wellness! Founded in 2023, we like to say we
                                 are
-                                bringing joy to India, and it’s something we hope to be doing for years to come. But
-                                we
+                                bringing joy to India, and it’s something we hope to be doing for years to come. But we
                                 offer more than just high-quality, delicious products.
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 ">
+                    <div class="col mx-auto mt-3 ">
                         <h6 class="text-uppercase font-weight-bold footer-logo">Quick Links</h6>
                         <div class="sub-link">
                             <p class="logo-text">
@@ -297,7 +322,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                    <div class="col mx-auto mt-3">
                         <h6 class="text-uppercase mb-4 font-weight-bold footer-logo">
                             Information
                         </h6>
@@ -317,7 +342,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-md-4 col-lg-3 col-xl-2 mx-auto mt-3">
+                    <div class="col mx-auto mt-3">
                         <h6 class="text-uppercase mb-4 font-weight-bold footer-logo">Contact Us</h6>
                         <div class="sub-link">
                             <p class="logo-text"><i class=" mr-3"></i> Home Grow Enterprises</p>
@@ -352,78 +377,16 @@
                 </div>
             </div>
         </section>
+
+
     </footer>
 
-    <script>
-        // Validate Mobile Number
-        function validateMobile(mobile) {
-            const mobileRegex = /^[0-9]{10}$/; // Regular expression for 10-digit Indian mobile numbers
-            return mobileRegex.test(mobile);
-        }
-
-        // Validate Email
-        function validateEmail(email) {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Basic email pattern
-            return emailRegex.test(email);
-        }
-
-        // Validate OTP
-        function validateOTP(otp) {
-            const otpRegex = /^[0-9]{6}$/; // OTP should be 6 digits
-            return otpRegex.test(otp);
-        }
-
-        // OTP verification 
-        document.getElementById("submitMobile").addEventListener("click", function () {
-            const mobileInput = document.querySelector("#mobileForm input[type='text']").value;
-            if (validateMobile(mobileInput)) {
-                document.getElementById("mobileForm").style.display = "none";
-                document.getElementById("otpForm").style.display = "block";
-            } else {
-                alert("Please enter a valid mobile number.");
-            }
-        });
-    
-        // Show email form when "Using Email?" 
-        document.getElementById("showEmailForm").addEventListener("click", function () {
-            document.getElementById("mobileForm").style.display = "none";
-            document.getElementById("emailForm").style.display = "block";
-        });
-
-        // Show email form when "Using mobile?" 
-        document.getElementById("showMobileForm").addEventListener("click", function () {
-            document.getElementById("mobileForm").style.display = "block";
-            document.getElementById("emailForm").style.display = "none";
-        });
-
-        //  OTP verification 
-        document.getElementById("submitEmail").addEventListener("click", function () {
-            const emailInput = document.querySelector("#emailForm input[type='email']").value;
-            if (validateEmail(emailInput)) {
-                document.getElementById("emailForm").style.display = "none";
-                document.getElementById("otpForm").style.display = "block";
-            } else {
-                alert("Please enter a valid email address.");
-            }
-        });
-        
-
-        // Verify OTP 
-        document.getElementById("verifyOTP").addEventListener("click", function () {
-            const otpInput = document.querySelector("#otpForm input[type='text']").value;
-            if (validateOTP(otpInput)) {
-                alert("OTP verified successfully!");
-            } else {
-                alert("Please enter a valid OTP.");
-            }
-        });
-
-        
-    </script>
-
     <script src="/assest/js/script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
         crossorigin="anonymous"></script>
 </body>
 
